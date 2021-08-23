@@ -146,7 +146,11 @@ pipeline {
             parameters([
               string(defaultValue: "${NEW_UPSTREAM_DOCKERHUB_IMAGE_DIGEST}",
                      description: "Current Upstream DockerHub Image Digest",
-                     name: 'CURRENT_UPSTREAM_DOCKERHUB_IMAGE_DIGEST',
+                     name: "CURRENT_UPSTREAM_DOCKERHUB_IMAGE_DIGEST",
+                     trim: true),
+              string(defaultValue: "false",
+                     description: "Force image rebuild and republish to Docker Hub?",
+                     name: "FORCE_IMAGE_REBUILD",
                      trim: true)
             ])
           ])
