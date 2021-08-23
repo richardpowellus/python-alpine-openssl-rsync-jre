@@ -34,6 +34,7 @@ pipeline {
             FORCE_IMAGE_REBUILD = "false"
           }
           if (FORCE_IMAGE_REBUILD == "true") {
+            echo("Forced image rebuild requested. Image WILL be rebuilt.")
             REBUILD_IMAGE = "true"
           }
         }
